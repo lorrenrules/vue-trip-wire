@@ -1,0 +1,31 @@
+{
+  "name": "vue-trip-wire",
+  "version": "1.0.0",
+  "description": "Vue.js Plugin for firing functions when an element reaches designated point in viewport",
+  "main": "dist/vue-trip-wire.min.js",
+  "module": "src/vueTripWire.js",
+  "scripts": {
+    "build": "webpack --progress"
+  },
+  "keywords": [
+    "VueJs",
+    "Vue",
+    "Js",
+    "JavaScript",
+    "Plugin",
+    "Library",
+    "NPM",
+    "Yarn"
+  ],
+  "author": "Lorren Gordon",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
