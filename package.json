@@ -4,6 +4,7 @@
   "description": "Vue.js Plugin for firing functions when an element reaches designated point in viewport",
   "main": "dist/vue-trip-wire.min.js",
   "module": "src/vueTripWire.js",
+  "repository": "git://github.com/lorrenrules/vue-trip-wire.git",
   "scripts": {
     "build": "webpack --progress"
   },
