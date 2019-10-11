@@ -1,7 +1,7 @@
 {
   "name": "vue-trip-wire",
   "version": "1.0.0",
-  "description": "Vue.js Plugin for firing functions when an element reaches designated point in viewport",
+  "description": "Vue.js plugin for firing functions when an element reaches designated position in viewport.",
   "main": "dist/vue-trip-wire.min.js",
   "module": "src/vueTripWire.js",
   "repository": "git://github.com/lorrenrules/vue-trip-wire.git",
@@ -15,6 +15,8 @@
     "JavaScript",
     "Plugin",
     "Library",
+    "Scroll",
+    "Animation",
     "NPM",
     "Yarn"
   ],

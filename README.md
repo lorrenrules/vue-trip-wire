@@ -1,6 +1,7 @@
 # Vue Trip Wire
-A [Vue.js](https://vuejs.org) plugin for firing functions when an element reaches a designated point in the viewport.
-It uses a custom directive in which you can fire local component methods, or optionally, you can import a module of functions to use globaly across your application.
+A [Vue.js](https://vuejs.org) plugin for firing function when an element reaches designated position in viewport.
+
+Great for animations!
 
 ## Setup
 Install via NPM:
@@ -55,7 +56,7 @@ For testing purposes, you may add an indicator property with optional 'text' and
 An empty object passed will default to values 'trigger' for text, and 'green' for color.
 *Note: Because accidents happen, indicators will not be displayed if NODE_ENV is set to 'production'*
 ```html
-<h1 v-trip-wire="{ pos: 0.5,func: yourComponentMethod, indicator: { text: 'Your trigger!', color: 'red' } }">
+<h1 v-trip-wire="{ pos: 0.5, func: yourComponentMethod, indicator: { text: 'Your trip wire', color: 'red' } }">
 ```
 
 ## License
