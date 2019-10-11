@@ -29,7 +29,7 @@ Vue.use(vueTripWire, functionsModule)
 
 Trip Wire uses a custom directive `v-trip-wire`, which accepts an object as its value.
 
-The object should include a 'pos' property with a numeric value between 0 and 1, representing the position trigger, which is the percentage from the top of the viewport to fire the method, i.e. 0.5 would be 50% down the viewport.
+The object should include a 'pos' property with a numeric value between 0 and 1, representing the position trigger, which is the percentage from the top of the viewport to fire the method, i.e. 0.5 would be 50% down the viewport. Defaults to 0.5 if no position added.
 
 The object should also contain a 'func' property with the value of the desired local component method, or if you included a module with custom functions, the string name of the function you wish to fire upon reaching the position trigger.
 
