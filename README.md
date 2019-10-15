@@ -1,5 +1,5 @@
 # Vue Trip Wire
-A [Vue.js](https://vuejs.org) plugin for firing function when an element reaches designated position in viewport.
+A [Vue.js](https://vuejs.org) plugin for firing functions when an element reaches a designated position in the viewport.
 
 Great for animations!
 
@@ -29,9 +29,9 @@ Vue.use(vueTripWire, functionsModule)
 
 Trip Wire uses a custom directive `v-trip-wire`, which accepts an object as its value.
 
-The object should include a 'pos' property with a numeric value between 0 and 1, representing the position trigger, which is the percentage from the top of the viewport to fire the method, i.e. 0.5 would be 50% down the viewport. Defaults to 0.5 if no position added.
+The object should include a `pos` property of numeric value between 0 and 1, representing the position trigger, which is the percentage from the top of the viewport to fire the method; i.e. 0.25 would be 25% down the viewport. Defaults to 0.5 if no position added.
 
-The object should also contain a 'func' property with the value of the desired local component method, or if you included a module with custom functions, the string name of the function you wish to fire upon reaching the position trigger.
+The object should also contain a `func` property with the value of the desired local component method, or if you included a module with custom functions, the string name of the function you wish to fire upon reaching the position trigger.
 
 ```html
 <h1 v-trip-wire="{ pos: 0.5, func: yourComponentMethod }">
@@ -41,18 +41,20 @@ or
 <h1 v-trip-wire="{ pos: 0.5, func: 'stringValueOfGlobalFunction' }">
 ```
 
-When using global functions, parameters may be passed to the function via the 'params' property:
-*Tip: Use a context object parameter for functions requiring multiple parameters, which you can destructure in its definition if desired:*
+Parameters may be passed to the function via the `params` property. Your function will determine the format of your parameter(s).
+
+*For example, here is a function which destructures a context object parameter.*
 ```javascript
-const yourGlobalFunction = ({param1, param2}) => {
+const yourFunction = ({param1, param2}) => {
   // logic
 }
 ```
 ```html
-<h1 v-trip-wire="{ pos: 0.5, func: 'yourGlobalFunction', params: { param1: 'value1', param2: 'value2' } }">
+<h1 v-trip-wire="{ pos: 0.5, func: 'yourFunction', params: { param1: 'value1', param2: 'value2' } }">
 ```
 
-For testing purposes, you may add an indicator property with optional 'text' and 'color' properties to the value object,which will display a visual representation of the positional trigger.
+For testing purposes, you may add an indicator property with optional 'text' and 'color' properties to the value object, which will display a visual representation of the positional trigger.
+
 An empty object passed will default to values 'trigger' for text, and 'green' for color.
 *Note: Because accidents happen, indicators will not be displayed if NODE_ENV is set to 'production'*
 ```html

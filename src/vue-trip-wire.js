@@ -26,7 +26,7 @@ export default {
         let f = function () {
           if (!binding.ran && el.getBoundingClientRect().y < (window.innerHeight * binding.value.pos)) {
             if (isFunction(binding.value.func)) {
-              binding.value.func()
+              binding.value.func(binding.value.params)
               binding.ran = true
             } else {
               options[binding.value.func](el, binding.value.params)
